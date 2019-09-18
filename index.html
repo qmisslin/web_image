@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Morphologie mathématique</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/simplebar.css">
+    <link rel="stylesheet" href="styles/fa_all.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="win_container" class="primary">
+            <div id="minimize_btn" class="btn"><i class="fas fa-window-minimize"></i></div>
+            <div id="close_btn" class="btn"><i class="fas fa-times"></i></div>
+        </div>
+        <div id="app_container">
+            <!-- Options -->
+            <div id="option_container">
+                <div class="label">Choix d'une image : </div>
+                <div id="choose_image" data-simplebar data-simplebar-auto-hide="false">
+                    <div id="choose_image_scrollable"></div>
+                </div>
+            </div>
+
+            <!-- Render -->
+            <div id="render_container">
+                <canvas id="image_view"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/simplebar.min.js"></script>
+    <script src="images/images.js"></script>
+    <script src="scripts/processing.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
