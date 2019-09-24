@@ -48,7 +48,11 @@ App.prototype.selectImage = function(el) {
 
 // Process selected image
 App.prototype.process = function() {
-    let p = new Processing(this.select_image);
+    let p = new Processing(this.select_image.getData());
+
+    let struct = Processing.generateDisk(4);
+    console.log(struct);
+    p.erosion(struct);
     p.render();
 }
 
