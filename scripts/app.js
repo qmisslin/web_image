@@ -27,7 +27,10 @@ App.prototype.generateSelectImage = function() {
     });
 
     // Select first image
-    this.selectImage(this.dom.selectImageAnchor.firstChild);
+    let el = d.querySelectorAll("img")[7];
+    el.addEventListener('load', function() {
+        that.selectImage(el);
+    });
 }
 
 // Select image
@@ -45,7 +48,8 @@ App.prototype.selectImage = function(el) {
 
 // Process selected image
 App.prototype.process = function() {
-    new Processing(this.select_image);
+    let p = new Processing(this.select_image);
+    p.render();
 }
 
 // Start app

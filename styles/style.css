@@ -84,6 +84,7 @@ body {
 #option_container {
     background-color: #101010;
     width: 300px;
+    min-width: 300px;
     padding: 10px;
     color: white;
     font-size: 16px;
@@ -138,5 +139,9 @@ body {
     background-color: #404040;
     flex-grow: 1;
     margin: 20px;
-    border-radius: 15px;
+}
+
+#image_view {
+    max-width: 100%;
+    max-height: 100%;
 }

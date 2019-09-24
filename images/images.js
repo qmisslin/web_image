@@ -43,17 +43,20 @@ Image.prototype.loadImage = function(number, extention, callback) {
 
 Image.prototype.getData = function() {
 
+    // Get size of element
+    let w = this.element.naturalWidth;
+    let h = this.element.naturalHeight;
+
     // Create virtual canvas
     let canvas = document.createElement('canvas');
     let context = canvas.getContext('2d');
-    canvas.width = this.element.width;
-    canvas.height = this.element.height;
+    canvas.width = w;
+    canvas.height = h;
 
-    // Draw image on canvas 
+    // Draw image on canvas and get data
     context.drawImage(this.element, 0, 0);
+    this.data = context.getImageData(0, 0, w, h);
 
-    // Get image data
-    this.data = context.getImageData(0, 0, this.element.naturalWidth, this.element.naturalHeight);
     return this.data;
 }
 
